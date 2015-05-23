@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template for Angular JS</title>
+    <meta name="viewport" content="initial-scale=1" />
+    <!-- ANGULAR MATERIAL CSS-->
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="styles/leftPanel.css">
+    <link rel="stylesheet" href="styles/mainToolbar.css">
+    <link rel="stylesheet" href="styles/rightPanel.css">
+</head>
+<body ng-app="webApp">
+
+    <div layout="row" flex>
+        <!--LEFT PANEL-->
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+            <div id="leftPanel" ng-include="'views/leftPanel.html'" ng-controller="LeftPanelController"></div>
+        </md-sidenav>
+        <!--CENTER CONTENT--->
+        <md-content flex>
+            <!--CENTER TOOLBAR-->
+            <div id="mainToolbar" ng-include="'views/mainToolbar.html'" ng-controller="MainToolbarController"></div>
+            <!--CENTER UNDER TOOLBAR-->
+            <div layout="column" layout-fill layout-align="top center">
+                The left sidenav will 'lock open' on a medium (>=960px wide) device.
+                <br/><br/>
+                The right sidenav will focus on a specific child element.
+            </div>
+        </md-content>
+        <!--RIGHT PANEL-->
+        <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+            <div id="rightPanel" ng-include="'views/rightPanel.html'" ng-controller="RightPanelController"></div>
+        </md-sidenav>
+    </div>
+
+    <!-- ANGULAR JS-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <!-- ANGULAR MATERIAL -->
+    <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="../bower_components/angular-material/angular-material.min.js"></script>
+    <!-- APP JS -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/mainToolbarController.js"></script>
+    <script src="scripts/controllers/leftPanelController.js"></script>
+    <script src="scripts/controllers/rightPanelController.js"></script>
+    <script src="scripts/models/icecreamFactory.js"></script>
+</body>
+</html>

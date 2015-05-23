@@ -1,0 +1,9 @@
+<div (click)="handleClick()">
+	Drink:
+	<br/>
+	<ul>
+		<li *for='#category of categories'>{{category}}</li>
+    </ul>
+    <br/>
+    <div *if="categories.length > 2">More than 2 beers</div>
+</div>

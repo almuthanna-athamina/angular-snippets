@@ -1,0 +1,21 @@
+#mainToolbar {
+    background-color:rgb(167, 170, 186);
+}
+
+.mainToolbarTitle {
+    margin-left:15px;
+}
+
+.hamburgerButton {
+    padding: 0;
+    margin: 0;
+    height: 35px;
+    width: 35px;
+    float:left;
+}
+
+.rightButton {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}

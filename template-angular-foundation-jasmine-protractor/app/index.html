@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Template for Angular JS with Foundation</title>
+
+    <!-- ANGULAR JS -->
+    <script src="../bower_components/angular/angular.min.js"></script>
+
+    <!-- FOUNDATION JS -->
+    <script src="../bower_components/angular-foundation/mm-foundation-tpls.min.js"></script>
+
+    <!-- FOUNDATION CSS -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.0/css/foundation.css" rel="stylesheet">
+</head>
+<body ng-app="webApp">
+    <div class="off-canvas-wrap">
+        <div class="inner-wrap">
+
+            <!--NAVIGATION BAR-->
+            <nav class="tab-bar">
+
+                <!--LEFT NAVIGATION BAR BUTTON-->
+                <section class="left-small">
+                    <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+                </section>
+
+                <!--MIDDLE NAVIGATION BAR SECTION-->
+                <section class="middle tab-bar-section">
+                    <h1 class="title">OffCanvas</h1>
+                </section>
+
+                <!--RIGHT NAVIGATION BAR BUTTON-->
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+                </section>
+            </nav>
+
+            <!--LEFT SIDEBAR CONTENT-->
+            <aside class="left-off-canvas-menu">
+
+                <!-- ANGULAR VIEW TEMPLATE FOR LEFT SIDEBAR-->
+                <div ng-include="'views/leftsidebar.html'" ng-controller="LeftSidebarCntrl"></div>
+
+            </aside>
+
+            <!--RIGHT SIDEBAR CONTENT-->
+            <aside class="right-off-canvas-menu">
+
+                <!-- ANGULAR VIEW TEMPLATE FOR RIGHT SIDEBAR-->
+                <div ng-include="'views/rightsidebar.html'" ng-controller="RightSidebarCntrl"></div>
+
+            </aside>
+
+            <!--MAIN CONTENT-->
+            <section class="main-section">
+
+                <!-- ANGULAR VIEW TEMPLATE FOR MAIN CONTENT-->
+                <div ng-include="'views/main.html'" ng-controller="MainCntrl"></div>
+
+            </section>
+
+            <a class="exit-off-canvas"></a>
+        </div>
+    </div>
+
+    <!-- APP CSS -->
+    <link rel="stylesheet" href="styles/leftsidebar.css">
+    <link rel="stylesheet" href="styles/rightsidebar.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+    <!-- APP JS -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/leftsidebar.js"></script>
+    <script src="scripts/controllers/rightsidebar.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+</body>
+</html>
