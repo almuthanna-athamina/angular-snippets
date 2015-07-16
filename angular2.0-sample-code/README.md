@@ -24,7 +24,7 @@ __Version__: 2.0.0-alpha.20
 * View Template for custom component using an external .html file.
 * Importing a custom component into the app component.
 
-###Sample 4: Handling click events, Repeating with For, Filtering with If
+###Sample 4: Handling Click Events, Repeating with For, Filtering with If
 
 * Click events
 * Repeating
